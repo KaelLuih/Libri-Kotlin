@@ -47,12 +47,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.libri.ui.theme.LibriTheme
 
+data class Livro(
+    val title: String,
+    val location: String,
+    val colorPlaceholder: Color
+)
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             LibriTheme {
-                Feed()
+                Tela()
             }
         }
     }
@@ -66,7 +72,78 @@ fun Feed(){
             .safeDrawingPadding(),
         color = Color(0xFFFFFFFF)
     ) {
+        Box(
+            modifier = Modifier
+                .size(48.dp)
+                .border(1.dp, Color.Black, CircleShape)
+                .padding(10.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                painter = painterResource(R.drawable.livro),
+                contentDescription = "Icon de livro",
+                modifier = Modifier.size(23.dp)
+            )
+        }
+        Text(
+            text = "LIBRI",
+            fontSize = 28.sp,
+            fontFamily = FontFamily.Serif,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFFF0D785),
+            letterSpacing = 2.sp
+        )
+        Box(
+            modifier = Modifier
+                .size(48.dp)
+                .border(1.dp, Color.Black, CircleShape)
+        ) {
+            Image(
+                painter = painterResource(R.drawable.iconuser),
+                contentDescription = "Icon de usuario",
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(CircleShape)
+            )
+        }
+    }
+}
 
+@Composable
+fun LivroSection(){
+    val livros = listOf(
+        Livro("CORTE DE NÉVOA E FÚRIA", "Via Verde - BR", Color(0xFFB39DDB)),
+        Livro("NOITES BRANCAS", "Londres - UK", Color(0xFFFFCC80)),
+        Livro("É ASSIM QUE ACABA", "Nova Iorque - EUA", Color(0xFF90CAF9)),
+        Livro("EU QUERO A ÁRVORE...", "Sanaã - Iêmen", Color(0xFFA5D6A7)),
+        Livro("O ESTRANGEIRO", "Lima - Peru", Color(0xFF80CBC4))
+    )
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(top = 24.dp)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 24.dp)
+                .background(
+                    Color(0xFFFFEFA7),
+                    shape = RoundedCornerShape(topEnd = 40.dp, topStart = 40.dp)
+                )
+        ) {
+            LazyColumn(
+                contentPadding = PaddingValues(
+                    start = 24.dp, end = 24.dp, bottom = 100.dp
+                ),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                items(livros){ livro ->
+                    LivrosCard(livro)
+                }
+            }
+        }
     }
 }
 
