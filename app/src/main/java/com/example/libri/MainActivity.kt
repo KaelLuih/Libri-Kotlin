@@ -3,54 +3,57 @@ package com.example.libri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.collection.mutableObjectIntMapOf
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.CrossAxisAlignment.CenterCrossAxisAlignment.align
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.outlined.FavoriteBorder
-import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material3.AlertDialogDefaults.shape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.libri.ui.theme.LibriTheme
 
 data class Livro(
+    val imageRes: Int,
     val title: String,
-    val location: String,
-    val colorPlaceholder: Color
+    val location: String
 )
 
 class MainActivity : ComponentActivity() {
@@ -65,12 +68,30 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Feed(){
-    Surface(
+fun Tela(){
+    Scaffold(
+        containerColor = Color.White,
+        topBar = { TopBar()},
+        bottomBar = { LibriBottom()}
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValues)
+                .fillMaxSize()
+        ) {
+            LivroSection()
+        }
+    }
+}
+
+@Composable
+fun TopBar(){
+    Row(
         modifier = Modifier
-            .fillMaxSize()
-            .safeDrawingPadding(),
-        color = Color(0xFFFFFFFF)
+            .fillMaxWidth()
+            .padding(horizontal = 24.dp, vertical = 16.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
             modifier = Modifier
@@ -112,13 +133,14 @@ fun Feed(){
 @Composable
 fun LivroSection(){
     val livros = listOf(
-        Livro("CORTE DE NÉVOA E FÚRIA", "Via Verde - BR", Color(0xFFB39DDB)),
-        Livro("NOITES BRANCAS", "Londres - UK", Color(0xFFFFCC80)),
-        Livro("É ASSIM QUE ACABA", "Nova Iorque - EUA", Color(0xFF90CAF9)),
-        Livro("EU QUERO A ÁRVORE...", "Sanaã - Iêmen", Color(0xFFA5D6A7)),
-        Livro("O ESTRANGEIRO", "Lima - Peru", Color(0xFF80CBC4))
+        Livro( R.drawable.image_14,"CORTE DE NÉVOA E FÚRIA", "Via Verde - BR"),
+        Livro( R.drawable.image_15,"NOITES BRANCAS", "Londres - UK"),
+        Livro( R.drawable.image_13,"É ASSIM QUE ACABA", "Nova Iorque - EUA"),
+        Livro( R.drawable.image_16,"EU QUERO A ÁRVORE...", "Sanaã - Iêmen"),
+        Livro( R.drawable.image_19,"O ESTRANGEIRO", "Lima - Peru"),
+        Livro( R.drawable.livro_7, "RELATOS DE UM GATO VIAJANTE", "Sidney - Austrália"),
+        Livro( R.drawable.livro_6, "O SOL É PARA TODOS", "Praga - República Tcheca")
     )
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -137,7 +159,8 @@ fun LivroSection(){
                 contentPadding = PaddingValues(
                     start = 24.dp, end = 24.dp, bottom = 100.dp
                 ),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.padding(top = 24.dp)
             ) {
                 items(livros){ livro ->
                     LivrosCard(livro)
@@ -147,12 +170,10 @@ fun LivroSection(){
     }
 }
 
-private infix fun Unit.background(copy: Any) {
-
-}
-
 @Composable
 fun LivrosCard(livros:Livro) {
+    var isFavorite by remember { mutableStateOf(false) }
+
     Card(
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
@@ -169,13 +190,15 @@ fun LivrosCard(livros:Livro) {
         ) {
 
             Box(
-                modifier = Modifier.size(76.dp)
+                modifier = Modifier
+                    .size(76.dp)
                     .clip(RoundedCornerShape(16.dp))
-                    .background(livros.colorPlaceholder)
             ) {
                 Image(
-                    painter = painterResource(R.drawable.image_14), contentDescription = "imagem1",
+                    painter = painterResource(id = livros.imageRes),
+                    contentDescription = "imagem1",
                     modifier = Modifier
+                        .fillMaxSize()
                         .size(28.dp)
                 )
             }
@@ -189,25 +212,33 @@ fun LivrosCard(livros:Livro) {
                     maxLines = 2
                 )
                 Spacer(modifier = Modifier.height(4.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(
-                        imageVector = Icons.Default.LocationOn,
-                        contentDescription = null,
-                        modifier = Modifier.size(14.dp)
-                    )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Default.LocationOn,
+                            contentDescription = null,
+                            modifier = Modifier.size(14.dp)
+                        )
 
-                    Spacer(modifier = Modifier.height(4.dp))
+                        Spacer(modifier = Modifier.height(4.dp))
 
-                    Text(
-                        text = livros.location,
-                        fontSize = 12.sp
-                    )
+                        Text(
+                            text = livros.location,
+                            fontSize = 12.sp
+                        )
+                    }
+                    IconButton(onClick = { isFavorite = !isFavorite }) {
+                        Icon(
+                            imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
+                            contentDescription = "Favoritar",
+                            tint = if (isFavorite) Color.Red else Color.Gray,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
                 }
-                Icon(
-                    imageVector = Icons.Outlined.FavoriteBorder,
-                    contentDescription = "Favoritar",
-                    modifier = Modifier.size(24.dp)
-                )
             }
         }
     }
@@ -222,12 +253,12 @@ fun LibriBottom(){
             .height(90.dp)
             .border(1.dp, Color.Black, CircleShape),
         shape = RoundedCornerShape(topStart = 40.dp, topEnd = 40.dp),
-        color = Color.White,
-
+        color = Color.White
     ){
-        Row(    modifier = Modifier
-            .fillMaxSize()
-            .padding(horizontal = 24.dp),
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 24.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -238,35 +269,34 @@ fun LibriBottom(){
                     .border(1.dp, Color.Black, CircleShape),
                 contentAlignment = Alignment.Center
             ){
-                Icon(painter = painterResource(R.drawable.union ) ,
+                Icon(
+                    painter = painterResource(R.drawable.union ) ,
                     contentDescription = "Home",
-                    modifier = Modifier
-                        .size(28.dp)
-                        .border(1.dp, Color.Black, CircleShape)
+                    modifier = Modifier.size(28.dp)
                 )
             }
             IconButton(onClick = { }) {
-                Icon(painter = painterResource(R.drawable.add),
+                Icon(
+                    painter = painterResource(R.drawable.add),
                     contentDescription = "Add",
-                    Modifier
-                        .size(28.dp)
-                        .border(1.dp, Color.Black, CircleShape)
-                    )
-
-            }
-            IconButton(onClick = { }) {
-                Icon(painter = painterResource(R.drawable.vector),
-                    contentDescription = "Map",
-                    Modifier
-                        .size(28.dp)
-                        .border(1.dp, Color.Black, CircleShape),
-                )
-
-            }
-            Box{
-                Icon(painter = painterResource(R.drawable.add), contentDescription ="Notification",
                     Modifier.size(28.dp)
                 )
+            }
+            IconButton(onClick = { }) {
+                Icon(
+                    painter = painterResource(R.drawable.vector),
+                    contentDescription = "Map",
+                    Modifier.size(28.dp)
+                )
+            }
+            Box{
+                IconButton(onClick = { }) {
+                    Icon(
+                        painter = painterResource(R.drawable.vector__1_),
+                        contentDescription ="Notification",
+                        Modifier.size(28.dp)
+                    )
+                }
                 Box(
                     modifier = Modifier
                         .size(10.dp)
