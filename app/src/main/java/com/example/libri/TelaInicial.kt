@@ -26,7 +26,7 @@ import kotlinx.coroutines.delay
 fun TelaInicial(QuandoAcabarOTempo: () -> Unit){
     LaunchedEffect(key1 = true) {
 
-        delay(2000)
+        delay(1500)
         QuandoAcabarOTempo()
 
     }
