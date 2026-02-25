@@ -60,8 +60,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
             LibriTheme {
-                Tela()
+                var IniciarTelaInicial by remember { mutableStateOf(true) }
+                if(IniciarTelaInicial){
+                    TelaInicial(QuandoAcabarOTempo = { IniciarTelaInicial = false })
+                }else{
+                    Tela()
+                }
+
             }
         }
     }

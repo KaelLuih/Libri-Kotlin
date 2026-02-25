@@ -1,0 +1,10 @@
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{0}: checkout: moving from recuperacao to main
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{1}: reset: moving to b5a8bfd
+[33m40e04ab[m[33m ([m[1;31morigin/recuperacao[m[33m)[m HEAD@{2}: commit: Testando
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{3}: checkout: moving from recuperacao to recuperacao
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{4}: checkout: moving from recuperacao to recuperacao
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{5}: checkout: moving from b5a8bfdbc7421891f66fc67ff49726ab86b7359d to recuperacao
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{6}: reset: moving to b5a8bfd
+[33m8d49f30[m HEAD@{7}: pull origin main --rebase (start): checkout 8d49f30bdd27dae0654036e4657db3d1002ce0e7
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{8}: Branch: renamed refs/heads/master to refs/heads/main
+[33mb5a8bfd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mrecuperacao[m[33m)[m HEAD@{10}: commit (initial): Feat: Criando tela inicial

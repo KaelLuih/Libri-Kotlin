@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_iconuser.jpg.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\iconuser.jpg"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_livro.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\livro.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_add.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\add.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_image_15.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\image_15.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_image_13.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\image_13.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_livro_6.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\livro_6.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_livro_7.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\livro_7.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_union.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\union.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.libri.app-debug-44:/drawable_image_34.png.flat",
+        "source": "com.example.libri.app-main-46:/drawable/image_34.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_vector.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\vector.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_image_16.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\image_16.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_vector__1_.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\vector__1_.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_image_14.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\image_14.png"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-debug-44:\\drawable_image_19.png.flat",
+        "source": "C:\\Users\\kael_araujo\\.gradle\\daemon\\8.4\\com.example.libri.app-main-46:\\drawable\\image_19.png"
+    }
+]
